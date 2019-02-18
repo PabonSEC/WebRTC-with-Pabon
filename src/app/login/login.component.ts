@@ -11,7 +11,17 @@ export class LoginComponent implements OnInit {
 
   searchStr = '';
 
-  constructor() { }
+  constructor() {
+
+  }
+
+  ngAfterViewInit() {
+
+    VANTA.BIRDS({ 
+      el: "#birds"
+    });
+
+  }
 
   ngOnInit() {
   }
