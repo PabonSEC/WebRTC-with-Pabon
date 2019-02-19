@@ -17,8 +17,12 @@ export class LoginComponent implements OnInit {
 
   ngAfterViewInit() {
 
-    VANTA.BIRDS({ 
-      el: "#birds"
+    // VANTA.BIRDS({ 
+    //   el: "#birds"
+    // });
+
+    particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+      console.log('callback - particles.js config loaded');
     });
 
   }
