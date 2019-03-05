@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoaderComponent } from '../loader/loader.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,26 +13,26 @@ export class LoginComponent implements OnInit {
 
   searchStr = '';
 
-  constructor() {
+  constructor(public router: Router) {
+
 
   }
 
   ngAfterViewInit() {
 
-    // VANTA.BIRDS({ 
-    //   el: "#birds"
-    // });
-
-    particlesJS.load('particles-js', 'assets/js/particles.json', function() {
-      console.log('callback - particles.js config loaded');
+    VANTA.BIRDS({ 
+      el: "#birds"
     });
 
   }
 
   ngOnInit() {
+
   }
 
   searchMusic(){
+
+    this.router.navigate(['loader']);
 
   }
 
